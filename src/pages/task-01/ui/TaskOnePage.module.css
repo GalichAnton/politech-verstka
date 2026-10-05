@@ -1,0 +1,11 @@
+.result {
+  margin-top: 2rem;
+  max-width: 48rem;
+}
+
+.result ul {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.25rem;
+}

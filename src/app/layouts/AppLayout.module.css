@@ -8,3 +8,16 @@
   flex: 1;
   padding-block: clamp(2rem, 6vw, 5rem);
 }
+
+.skip-link {
+  background: var(--color-surface);
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: absolute;
+  top: -5rem;
+  z-index: 1;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
