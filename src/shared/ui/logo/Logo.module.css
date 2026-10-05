@@ -1,0 +1,48 @@
+.logo {
+  align-items: center;
+  display: inline-flex;
+  font-size: 1.125rem;
+  font-weight: 700;
+  gap: 0.75rem;
+}
+
+.symbol {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.symbol::before {
+  background: currentcolor;
+  clip-path: polygon(
+    50% 0,
+    75% 35%,
+    65% 35%,
+    90% 65%,
+    75% 65%,
+    100% 100%,
+    0 100%,
+    25% 65%,
+    10% 65%,
+    35% 35%,
+    25% 35%
+  );
+  content: '';
+  height: 38px;
+  left: 4px;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.symbol::after {
+  background: currentcolor;
+  bottom: 0;
+  content: '';
+  height: 12px;
+  left: 21px;
+  position: absolute;
+  width: 6px;
+}

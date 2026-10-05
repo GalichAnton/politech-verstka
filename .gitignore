@@ -1,1 +1,10 @@
-/.idea
+/.idea/
+/node_modules/
+/dist/
+/.pnpm-store/
+/.cache/
+*.tsbuildinfo
+*.local
+.env
+.env.*
+!.env.example
