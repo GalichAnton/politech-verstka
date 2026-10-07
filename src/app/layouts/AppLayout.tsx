@@ -21,6 +21,7 @@ const pageTitles: Record<string, string> = {
   '/places': 'Места и прогулки — Мой Сосновый Бор',
   '/practice': 'Практикум — Мой Сосновый Бор',
   '/practice/task-01': 'Задание 1 — Мой Сосновый Бор',
+  '/practice/task-02': 'Задание 2. Рисунок CSS — Мой Сосновый Бор',
 };
 
 export function AppLayout() {

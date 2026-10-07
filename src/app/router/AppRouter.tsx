@@ -6,6 +6,7 @@ import { NotFoundPage } from '@pages/not-found';
 import { PlacesPage } from '@pages/places';
 import { PracticePage } from '@pages/practice';
 import { TaskOnePage } from '@pages/task-01';
+import { TaskTwoPage } from '@pages/task-02';
 
 import { AppLayout } from '../layouts/AppLayout';
 
@@ -18,6 +19,7 @@ export function AppRouter() {
         <Route path="places" element={<PlacesPage />} />
         <Route path="practice" element={<PracticePage />} />
         <Route path="practice/task-01" element={<TaskOnePage />} />
+        <Route path="practice/task-02" element={<TaskTwoPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>

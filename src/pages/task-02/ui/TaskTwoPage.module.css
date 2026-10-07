@@ -1,0 +1,28 @@
+.result {
+  margin-top: 2rem;
+}
+
+.figure {
+  display: grid;
+  gap: 1rem;
+  justify-items: start;
+  margin: 1.5rem 0;
+}
+
+.figure figcaption {
+  color: var(--color-muted);
+  font-size: 0.875rem;
+}
+
+.frame {
+  border: 1px solid var(--color-border);
+  box-shadow: 0 3px 8px #21362e1a;
+}
+
+.description {
+  max-width: 42rem;
+}
+
+.back {
+  margin-top: 2rem;
+}
