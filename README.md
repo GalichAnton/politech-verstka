@@ -6,6 +6,9 @@
 а фотографии с Wikimedia Commons сопровождаются авторством и лицензиями.
 В практикуме также есть задание 2: CSS-рисунок гитары по варианту 5, размером
 200 × 200 px. Пояснение реализации находится в [docs/task-02.md](docs/task-02.md).
+Задание 3 — сцена на Flexbox по варианту 1: лягушка приближается к принцу,
+а при нажатии превращается в принцессу. Все эффекты и смена состояний реализованы
+на CSS. Пояснение находится в [docs/task-03.md](docs/task-03.md).
 
 ## Запуск
 
@@ -34,7 +37,7 @@ pnpm dev
 ```text
 src/
   app/       # запуск приложения, маршруты, общий layout и глобальные стили
-  pages/     # страницы: home, about, places, practice, task-01, task-02, not-found
+  pages/     # страницы: home, about, places, practice, task-01, task-02, task-03, not-found
   widgets/   # общие блоки: site-header и site-footer
   entities/  # city: история, места, источники, фотографии и компонент CityPhoto
   shared/    # универсальные компоненты: container, logo, page-intro
@@ -81,7 +84,8 @@ Prettier отвечает за форматирование, ESLint — за с�
 
 ## Страницы и размещение
 
-Маршруты: `/`, `/about`, `/places`, `/practice`, `/practice/task-01`, `/practice/task-02`.
+Маршруты: `/`, `/about`, `/places`, `/practice`, `/practice/task-01`, `/practice/task-02`,
+`/practice/task-03`.
 Неизвестные адреса показывают страницу 404 внутри приложения.
 На всех страницах присутствуют шапка, меню, `main` и подвал.
 Логотип размером 48×48 px нарисован только CSS.

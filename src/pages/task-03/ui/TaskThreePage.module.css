@@ -1,0 +1,226 @@
+.result {
+  margin-top: 2rem;
+}
+
+.description {
+  max-width: 42rem;
+}
+
+.stage {
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.trigger {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.scene {
+  align-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: 0 3px 8px #21362e1a;
+  color: var(--color-accent);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  padding: 1rem;
+  text-align: left;
+  transform-origin: center;
+  width: 450px;
+}
+
+.prince {
+  flex: 0 0 130px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.prince img {
+  height: 250px;
+  max-width: none;
+  width: 250px;
+}
+
+.partner {
+  flex: 0 1 230px;
+  height: 250px;
+  min-width: 0;
+  position: relative;
+}
+
+.question,
+.answer {
+  font-size: 1rem;
+  font-weight: 700;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.4s;
+  white-space: nowrap;
+}
+
+.frog,
+.princess {
+  height: 250px;
+  max-width: none;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 250px;
+}
+
+.frog {
+  left: -95px;
+  transform: translateX(60px);
+  transition:
+    opacity 0.5s,
+    transform 1.5s ease-in-out;
+}
+
+.princess {
+  left: -75px;
+  transform: scale(0.35);
+  transform-origin: 70% bottom;
+}
+
+.trigger:checked + .scene {
+  animation: scene-turn 1.8s ease-in-out;
+}
+
+.trigger:checked + .scene .frog {
+  opacity: 0;
+  transition: none;
+}
+
+.trigger:checked + .scene .answer {
+  opacity: 1;
+}
+
+.trigger:checked + .scene .princess {
+  animation: princess-appear 1.4s ease-out both;
+}
+
+.trigger:not(:checked) + .scene:hover .frog,
+.trigger:not(:checked):focus-visible + .scene .frog {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.trigger:not(:checked) + .scene:hover .question,
+.trigger:not(:checked):focus-visible + .scene .question {
+  opacity: 1;
+}
+
+.trigger:focus-visible {
+  outline: none;
+}
+
+.trigger:focus-visible + .scene {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.success,
+.demo:has(.trigger:checked) .hint {
+  display: none;
+}
+
+.demo:has(.trigger:checked) .success {
+  display: block;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.status {
+  color: var(--color-muted);
+  margin: 0;
+}
+
+.reset {
+  background: var(--color-tint);
+  border: 1px solid var(--color-border);
+  border-radius: 0.5rem;
+  color: var(--color-accent);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.back {
+  margin-top: 2rem;
+}
+
+@keyframes princess-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.35);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scene-turn {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  45% {
+    transform: rotate(-6deg);
+  }
+}
+
+@media (width <= 480px) {
+  .scene {
+    padding: 0.75rem;
+  }
+
+  .prince {
+    flex-basis: 115px;
+  }
+
+  .princess {
+    left: -100px;
+  }
+
+  .answer {
+    font-size: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger:checked + .scene,
+  .trigger:checked + .scene .princess {
+    animation: none;
+  }
+
+  .frog,
+  .question,
+  .answer {
+    transition: none;
+  }
+
+  .trigger:checked + .scene .princess {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
