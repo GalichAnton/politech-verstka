@@ -6,6 +6,9 @@ import { defineConfig } from 'vite';
 export default defineConfig(({ command, isPreview }) => ({
   plugins: [react()],
   base: command === 'build' || isPreview ? '/politech-verstka/' : '/',
+  server: {
+    host: '127.0.0.1',
+  },
   resolve: {
     alias: {
       '@app': fileURLToPath(new URL('./src/app', import.meta.url)),

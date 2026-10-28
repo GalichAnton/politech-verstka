@@ -48,15 +48,6 @@
   width: 68px;
 }
 
-.css-guitar-waist {
-  background: #f4d65c;
-  height: 22px;
-  left: 15px;
-  position: absolute;
-  top: 41px;
-  width: 42px;
-}
-
 .css-guitar-neck {
   background: linear-gradient(90deg, #9b5d0b, #f6d351 18% 82%, #9b5d0b);
   height: 94px;
